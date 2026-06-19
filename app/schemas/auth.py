@@ -11,14 +11,14 @@ from app.schemas.base import Base
 class AuthRequest(Base):
     """Login credentials: email and password."""
 
-    email: EmailStr = Field(...)
-    password: str = Field(..., min_length=6, max_length=60)
+    email: EmailStr = Field(..., examples=["user@example.com"])
+    password: str = Field(..., min_length=6, max_length=60, examples=["SecurePass123"])
 
 
 class UserRequest(AuthRequest):
     """Registration payload: extends AuthRequest with a name field."""
 
-    name: str = Field(..., min_length=1, max_length=50)
+    name: str = Field(..., min_length=1, max_length=50, examples=["John Doe"])
 
 
 class UserResponse(BaseModel):

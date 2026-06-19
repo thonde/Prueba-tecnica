@@ -11,8 +11,8 @@ from app.schemas.base import Base
 class RoleRequest(Base):
     """Payload for creating or updating a role."""
 
-    name: str = Field(..., min_length=1, max_length=50)
-    description: str | None = Field(None, max_length=60)
+    name: str = Field(..., min_length=1, max_length=50, examples=["editor"])
+    description: str | None = Field(None, max_length=60, examples=["Editor role"])
 
 
 class RoleResponse(BaseModel):
