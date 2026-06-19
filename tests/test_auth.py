@@ -5,7 +5,7 @@ def test_login_success(client, admin_user):
     """Login with valid credentials returns a JWT token."""
     response = client.post(
         "/auth/login",
-        json={"email": "admin@test.com", "password": "password123"},
+        json={"email": "admin@test.com", "password": "Password123!"},
     )
     assert response.status_code == 200
     data = response.json()
@@ -28,7 +28,7 @@ def test_register_duplicate_email(client, admin_user):
         "/auth/register",
         json={
             "email": "admin@test.com",
-            "password": "password123",
+            "password": "Password123!",
             "name": "Duplicate",
         },
     )
