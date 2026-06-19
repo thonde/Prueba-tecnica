@@ -48,7 +48,7 @@ def admin_user(session):
     user = User(
         name="Admin",
         email="admin@test.com",
-        password=hash_password("password123"),
+        password=hash_password("Password123!"),
     )
     session.add(user)
     session.commit()
@@ -90,7 +90,7 @@ def basic_user(session):
     user = User(
         name="Basic",
         email="basic@test.com",
-        password=hash_password("password123"),
+        password=hash_password("Password123!"),
     )
     session.add(user)
     session.commit()
