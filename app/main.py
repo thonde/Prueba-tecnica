@@ -22,7 +22,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="Auth API",
-    description="API de Autenticación y Autorización con FastAPI",
+    description="Authentication and Authorization API with FastAPI",
     version="0.1.0",
     lifespan=lifespan,
 )
@@ -35,4 +35,4 @@ app.include_router(permissions_router)
 
 @app.get("/")
 def read_root():
-    return {"message": "API de Autenticación y Autorización corriendo"}
+    return {"message": "Authentication and Authorization API running"}

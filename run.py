@@ -83,7 +83,7 @@ def run() -> None:
             session.add(UserRoleLink(user_id=admin_user.id, role_id=admin_role.id))
             session.commit()
 
-        print("Precarga completada")
+        print("Seed completed")
 
 
 if __name__ == "__main__":
