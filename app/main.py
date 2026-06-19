@@ -35,4 +35,4 @@ app.include_router(permissions_router)
 
 @app.get("/")
 def read_root():
-    return {"message": "La API de Autenticación y Autorización está corriendo correctamente"}
+    return {"message": "API de Autenticación y Autorización corriendo"}
